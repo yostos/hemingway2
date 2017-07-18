@@ -3,7 +3,7 @@ $primary: $blue
 $grey-dark: #42464c
 $family-sans-serif: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif
 
-@import "node_modules/bulma/bulma"
+@import "bulma/bulma"
 
 .container
   max-width: 800px
@@ -126,3 +126,26 @@ article+article
     pre,
     table
       margin-bottom: 1.5em
+  img
+    display: block
+    max-width: 100%
+    height: auto
+    border: 0
+    vertical-align: middle
+    margin-left: auto
+    margin-right: auto
+
+nav.pagination-single
+  padding: 20px 0 20px 0
+  overflow: hidden
+  span.previous
+    float: left
+    padding: 10px 0 10px 0
+    max-width: 300px
+  span.next
+    float: right
+    padding: 10px 0 10px 0
+    max-width: 300px
+  a
+    color: dardred
+
