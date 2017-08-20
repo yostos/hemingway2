@@ -16,10 +16,15 @@
 {{ partial "disqus" . }}
   <nav class="pagination-single">
     {{ if .Next }}
-      <span class="previous">&larr; <a href="{{ .Next.Permalink }}" rel="prev">{{ .Next.Title }}</a></span>
+      <span class="previous">
+        <i class="fa fa-angle-left"></i>
+        <a href="{{ .Next.Permalink }}" rel="prev">{{ .Next.Title }}</a>
+      </span>
     {{ end }}
     {{ if .Prev }}
-      <span class="next"><a href="{{ .Prev.Permalink }}" rel="next">{{ .Prev.Title }}</a> &rarr;</span>
+      <span class="next"><a href="{{ .Prev.Permalink }}" rel="next">{{ .Prev.Title }}</a>
+        <i class="fa fa-angle-right"></i>
+      </span>
     {{ end }}
   </nav>
 {{ partial "footer" . }}
