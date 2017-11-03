@@ -6,6 +6,7 @@
 <meta content="{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}" property="og:title">
 <title>{{ .Title }}{{ if eq .IsHome false }} | {{ .Site.Title }}{{ end }}</title>
 <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" />
+<script src="//use.edgefonts.net/source-code-pro:n2,n3,n4,n5,n6,n7,n9.js"></script>
 <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/style.css">
 <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/custom.css">
 <script src="https://use.fontawesome.com/105e227f5c.js"></script>
