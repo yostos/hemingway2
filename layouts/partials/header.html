@@ -10,7 +10,14 @@
 <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700&amp;subset=latin-ext" rel="stylesheet">
 <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/style.css">
 <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/custom.css">
-<script src="https://use.fontawesome.com/105e227f5c.js"></script>
+{{ with .Site.Params.google.site_verification }}
+<meta name="google-site-verification" content="{{.}}" />
+{{ end }}
+{{ with .Site.Params.awesomefont.id }}
+<script src="https://use.fontawesome.com/{{ . }}.js"></script>
+{{ else }}
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+{{ end }}
 {{ with .Site.Params.highlight.style }}
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/{{ . }}.min.css">
 {{ else }}
